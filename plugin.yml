@@ -7,4 +7,5 @@ inputs:
     description: Additional Checkov flags
 
 run:
-  sh: plugin.sh
+  bash:
+    path: plugin

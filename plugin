@@ -11,8 +11,8 @@ apt install -y python3-pip
 echo 'Install pip'
 #apt install -y python3.7-dev
 #echo 'Install dev'
-python3.7 -m pip install --upgrade pip
-echo 'Install pip upgrade'
+#python3.7 -m pip install --upgrade pip
+#echo 'Install pip upgrade'
 #python3.7 -m pip install -U multidict
 #echo 'Install multi'
 python3.7 -m pip install -U checkov #to install or upgrade checkov)

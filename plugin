@@ -1,6 +1,17 @@
 #!/bin/sh
-apt-get update -y
-apt-get install -y python3.7 python3-pip
-python3 --version
+
+# Add deadsnakes PPA
+add-apt-repository ppa:deadsnakes/ppa
+
+# Update package index
+apt-get update
+
+# Install Python 3.7 and pip
+apt-get install -y python3.7 python3.7-dev python3.7-venv python3-pip
+
+# Verify installation
+python3.7 --version
+pip3 --version
+
 pip3 install -U checkov
 checkov --directory ${PLUGIN_DIRECTORY} ${PLUGIN_FLAG}

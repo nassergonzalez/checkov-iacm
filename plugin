@@ -1,8 +1,8 @@
 #!/bin/sh
 
 apt install python3-pip
-curl -O https://bootstrap.pypa.io/pip/3.6/get-pip.py
-python3 get-pip.py --user
-pip --version
-pip install -U checkov
+curl "https://bootstrap.pypa.io/get-pip.py" -o "get-pip.py"
+python3 get-pip.py 
+pip3 --version
+pip3 install -U checkov
 checkov --directory ${PLUGIN_DIRECTORY} ${PLUGIN_FLAG}

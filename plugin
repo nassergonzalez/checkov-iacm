@@ -1,4 +1,4 @@
 #!/bin/sh
 
-echo "Ping"
-echo "${PLUGIN_DIRECTORY} ${PLUGIN_FLAG}"
+sudo pip install -U checkov
+checkov --directory ${PLUGIN_DIRECTORY} ${PLUGIN_FLAG}

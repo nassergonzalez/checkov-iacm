@@ -13,8 +13,8 @@ echo 'Install pip'
 #echo 'Install dev'
 python3.7 -m pip install --upgrade pip
 echo 'Install pip upgrade'
-python3.7 -m pip install -U multidict
-echo 'Install multi'
+#python3.7 -m pip install -U multidict
+#echo 'Install multi'
 python3.7 -m pip install -U checkov #to install or upgrade checkov)
 echo 'Install checkov'
 checkov --directory ${PLUGIN_DIRECTORY} ${PLUGIN_FLAG}

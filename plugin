@@ -1,5 +1,6 @@
 #!/bin/sh
 apt-get update -y
 apt-get install -y python3.7 python3-pip
+python3 --version
 pip3 install -U checkov
 checkov --directory ${PLUGIN_DIRECTORY} ${PLUGIN_FLAG}

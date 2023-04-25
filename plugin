@@ -1,5 +1,6 @@
 #!/bin/sh
-yum install python37
+
+apt install python3-pip
 curl -O https://bootstrap.pypa.io/pip/3.6/get-pip.py
 python3 get-pip.py --user
 pip --version

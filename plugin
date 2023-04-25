@@ -15,4 +15,6 @@ pip3 --version
 
 pip3 install -U checkov
 pip3 install -U dataclasses
+pip3 install --upgrade lark-parser
+
 checkov --directory ${PLUGIN_DIRECTORY} ${PLUGIN_FLAG}

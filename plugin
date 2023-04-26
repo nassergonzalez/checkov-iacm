@@ -1,20 +1,18 @@
 #!/bin/sh
 
 apt update
-echo 'Update'
-apt install -y software-properties-common
-echo 'Install'
+apt upgrade
+apt install -y wget build-essential libncursesw5-dev libssl-dev libsqlite3-dev tk-dev libgdbm-dev libc6-dev libbz2-dev libffi-dev zlib1g-dev
 add-apt-repository ppa:deadsnakes/ppa
-apt install -y python3.7
-echo 'Install python3.7'
-apt install -y python3-pip
-echo 'Install pip'
+apt install -y python3.10
+apt install -y python3.10-distutils
+curl -sS https://bootstrap.pypa.io/get-pip.py | python3.10
 #apt install -y python3.7-dev
 #echo 'Install dev'
 #python3.7 -m pip install --upgrade pip
 #echo 'Install pip upgrade'
 #python3.7 -m pip install -U multidict
 #echo 'Install multi'
-python3.7 -m pip install -U checkov #to install or upgrade checkov)
+python3.10 -m pip install -U checkov #to install or upgrade checkov)
 echo 'Install checkov'
 checkov --directory ${PLUGIN_DIRECTORY} ${PLUGIN_FLAG}
